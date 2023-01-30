@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num" name="numero"> <button id="addnum" onclick="addtovalues()">ajoutnumero </button><br><br>
+
+    <label>tab</label><p id="tab" ></p><br><br>
+    <label>max</label><p id="max" ></p><br><br>
+    <label>min</label><p id="min" ></p><br><br>
+    <label>tri</label><p id="tri" ></p><br><br>
+    
+    <script>
+        let  Ntab=" ";
+        let Ntri=" ";
+        let Nmax , Nmin  ;
+        let tab=[] ; 
+        i=0;
+        function compare(x, y) {
+    return x - y;
+}
+        
+function addtovalues()
+{
+    
+    tab[i]=document.getElementById("num").value;
+    tab.sort(compare);
+   
+ //saisie du tableau
+ Ntab+=document.getElementById("num").value+" ";
+ document.getElementById("tab").innerHTML=Ntab;
+ /**saisie du max et tri
+ 
+ if (document.getElementById("num").value-Nmax<0||Nmax==null)
+   { Nmax=document.getElementById("num").value }
+//saisie du min 
+if (document.getElementById("num").value-Nmin>0||Nmin==null) 
+   { Nmin=document.getElementById("num").value}
+
+ **/  
+
+
+document.getElementById("min").innerHTML=tab[0];
+
+document.getElementById("tri").innerHTML=tab;
+document.getElementById("max").innerHTML=tab[i];
+i+=1;
+}
+    </script>
+
+</body>
+
+</html>
