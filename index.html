@@ -32,7 +32,7 @@ function addtovalues()
 { 
     
     tab[i]=document.getElementById("num").value;
-    sum+=tab[i];
+    sum+=parseInt(tab[i]);
     tab.sort(compare);
    
  //saisie du tableau
@@ -54,6 +54,8 @@ document.getElementById("min").innerHTML=tab[0];
 
 document.getElementById("tri").innerHTML=tab;
 document.getElementById("max").innerHTML=tab[i];
+document.getElementById("max").innerHTML=tab[i];
+document.getElementById("sum").innerHTML=sum;
 i+=1;
 
 }
