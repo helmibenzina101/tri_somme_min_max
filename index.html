@@ -14,8 +14,11 @@
     <label>max</label><p id="max" ></p><br><br>
     <label>min</label><p id="min" ></p><br><br>
     <label>tri</label><p id="tri" ></p><br><br>
+    <label>somme</label><p id="sum" ></p><br><br>
+
     
     <script>
+        let sum =0 ;
         let  Ntab=" ";
         let Ntri=" ";
         let Nmax , Nmin  ;
@@ -26,23 +29,24 @@
 }
         
 function addtovalues()
-{
-    
+{ 
+    sum+=sum
     tab[i]=document.getElementById("num").value;
     tab.sort(compare);
    
  //saisie du tableau
  Ntab+=document.getElementById("num").value+" ";
  document.getElementById("tab").innerHTML=Ntab;
- /**saisie du max et tri
+ /**
+ //saisie du max 
  
- if (document.getElementById("num").value-Nmax<0||Nmax==null)
-   { Nmax=document.getElementById("num").value }
+ if (parseFloat.document.getElementById("num").value>Nmax||Nmax==null)
+   { Nmax=parseFloat.document.getElementById("num").value }
 //saisie du min 
-if (document.getElementById("num").value-Nmin>0||Nmin==null) 
-   { Nmin=document.getElementById("num").value}
+if (parseFloat.document.getElementById("num").value<Nmin||Nmin==null) 
+   { Nmin=parseFloat.document.getElementById("num").value}
 
- **/  
+  **/
 
 
 document.getElementById("min").innerHTML=tab[0];
@@ -50,6 +54,7 @@ document.getElementById("min").innerHTML=tab[0];
 document.getElementById("tri").innerHTML=tab;
 document.getElementById("max").innerHTML=tab[i];
 i+=1;
+
 }
     </script>
 
